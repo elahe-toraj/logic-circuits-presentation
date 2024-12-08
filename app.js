@@ -2,7 +2,7 @@ const galaxy = document.getElementById('galaxy');
 
 // ایجاد ستاره‌ها
 function createStars() {
-    for (let i = 0; i < 1500; i++) {
+    for (let i = 0; i < 500; i++) {
         let star = document.createElement('div');
         star.classList.add('star');
         
@@ -95,3 +95,26 @@ window.onload = function() {
 
 // ایجاد ستاره‌ها
 createStars();
+// اضافه کردن رویداد حرکت موس برای ایجاد ستاره‌ها
+document.addEventListener('mousemove', (event) => {
+    let star = document.createElement('div');
+    star.classList.add('star');
+    
+    let sizeClass = Math.random() < 0.3 ? 'small' : Math.random() < 0.6 ? 'medium' : 'large';
+    star.classList.add(sizeClass);
+
+    // تنظیم اندازه ستاره به 5px
+    star.style.width = '5px';
+    star.style.height = '5px';
+
+    // موقعیت موس را به عنوان موقعیت ستاره قرار می‌دهیم
+    star.style.top = `${event.clientY}px`;
+    star.style.left = `${event.clientX}px`;
+
+    galaxy.appendChild(star);
+
+    // ستاره بعد از چند ثانیه از صفحه حذف می‌شود
+    setTimeout(() => {
+        star.remove();
+    }, 3000); // زمان حذف 3 ثانیه
+});
