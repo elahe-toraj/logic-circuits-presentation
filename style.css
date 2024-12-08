@@ -34,14 +34,14 @@ body, html {
 }
 
 .meteor {
-    background-color: #c5ced3;
+    background-color: #ff66cc;
     width: 3px;
     height: 10px;
     animation: meteorAnimation 1s linear infinite;
 }
 
 .comet {
-    background-color: #c5ced3;
+    background-color: #ffcc00;
     width: 7px;
     height: 3px;
     animation: cometAnimation 8s linear infinite;
@@ -83,21 +83,20 @@ body, html {
 .star.small {
     width: 0.5px;
     height: 0.5px;
-    background-color: #c5ced3;
+    background-color: #9de3d5;
 }
 
 .star.medium {
     width: 2px;
     height: 2px;
-    background-color: #c5ced3;
+    background-color: #a8c0c4;
 }
 
 .star.large {
     width: 3px;
     height: 3px;
-    background-color: #c5ced3;
+    background-color: #ffffff;
 }
-
 
 .connector {
     position: absolute;
@@ -185,4 +184,82 @@ body, html {
     border-top: 1px solid white;
     transform: rotate(40deg);
     opacity: 0.5;
+}
+
+/* استایل برای هدر */
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+.header-box {
+    background-color: rgba(0, 0, 0, 0.6); /* پس‌زمینه با شفافیت */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* مرز سفید */
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    z-index: 11;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: headerBoxAnimation 2s ease-out; /* انیمیشن برای بخش باکس */
+}
+
+@keyframes headerBoxAnimation {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header-box h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: textColorChange 4s infinite alternate; /* انیمیشن برای تغییر رنگ متن */
+}
+
+@keyframes textColorChange {
+    0% {
+        color: #ff007f; /* رنگ ابتدایی */
+    }
+    50% {
+        color: #00ff7f; /* رنگ وسط */
+    }
+    100% {
+        color: #7f00ff; /* رنگ انتهایی */
+    }
+}
+
+.header-box p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
 }
