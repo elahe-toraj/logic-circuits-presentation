@@ -9,16 +9,13 @@ body, html {
     overflow-x: hidden;
     background-color: black;
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
     font-family: 'Arial', sans-serif;
-    cursor: pointer;
 }
 
 
 .galaxy {
-    position: absolute;
+    position: absolute; /* این باعث می‌شود که آسمان همیشه در پس‌زمینه بماند */
     top: 0;
     left: 0;
     width: 100%;
@@ -50,6 +47,8 @@ body, html {
     padding: 30px;
     margin-top: 5%;
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     max-width: 800px;
     text-align: center;
@@ -147,6 +146,7 @@ body, html {
 }
 
 .madar {
+    background: url('https://cdn.pixabay.com/photo/2018/07/11/13/44/space-3536740_960_720.jpg') no-repeat center center;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
@@ -202,14 +202,14 @@ body, html {
 }
 
 .meteor {
-    background-color: #ff66cc;
+    background-color: #ff6666;
     width: 3px;
     height: 10px;
     animation: meteorAnimation 1s linear infinite;
 }
 
 .comet {
-    background-color: #ffcc00;
+    background-color: #4c00ff;
     width: 7px;
     height: 3px;
     animation: cometAnimation 8s linear infinite;
