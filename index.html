@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!--background-->
     <section id="galaxy" class="galaxy">
+        <!--header section-->
         <header class="header">
             <div class="section header-box">
                 <h1>دیتای منطق و شمارنده ها</h1>
@@ -25,6 +26,7 @@
                         </button>
                     </div>
                 </form>
+                <!--star star-->
                 <div class="sky" style="top: 50px; left: 5px;">
                     <div class="star" style="top: 30%; left: 40%;"></div>
                     <div class="star" style="top: 50%; left: 60%;"></div>
@@ -34,7 +36,7 @@
                     <div class="lines"></div>
                 </div>
         
-                <div class="sky" style="top: 200px; left: 300px;">
+                <div class="sky" style="top: 300px; left: 200px;">
                     <div class="star" style="top: 20%; left: 25%;"></div>
                     <div class="star" style="top: 50%; left: 80%;"></div>
                     <div class="star" style="top: 70%; left: 40%;"></div>
@@ -43,7 +45,7 @@
                     <div class="lines"></div>
                 </div>
         
-                <div class="sky" style="top: 150px; left: 500px;">
+                <div class="sky" style="top: 150px; left: 400px;">
                     <div class="star" style="top: 40%; left: 20%;"></div>
                     <div class="star" style="top: 60%; left: 80%;"></div>
                     <div class="star" style="top: 30%; left: 40%;"></div>
@@ -53,18 +55,102 @@
                 </div>
             </div>
         </header>
-        <section id="madar">
-            <div class="madar">
-                <h2>مدار های منطقی</h2>
-                <p>
-                    مدارات منطقی سیستم‌هایی هستند که عملیات منطقی را روی سیگنال‌های دیجیتال (صفر و یک) انجام می‌دهند. این مدارات معمولاً از گیت‌های منطقی ساخته می‌شوند که هر گیت یک عمل منطقی خاص را انجام می‌دهد. این گیت‌ها اساس سیستم‌های دیجیتال هستند و برای انجام هرگونه پردازش و تصمیم‌گیری استفاده می‌شوند.
-                </p>
-                <div class="filter-btns">
-                    <button class="filter-btn" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter=".product">Products</button>
-                    <button class="filter-btn" data-filter=".inter">Intracting</button>
-                    <button class="filter-btn" data-filter=".web">Web app</button>
+        <!--madar section-->
+        <section class="madar" id="madar">
+            <div class="madar-box">
+                <div class="madar-header">
+                    <h2>مدار های منطقی</h2>
+                    <p>
+                        مدارات منطقی سیستم‌هایی هستند که عملیات منطقی را روی سیگنال‌های دیجیتال (صفر و یک) انجام می‌دهند. این مدارات معمولاً از گیت‌های منطقی ساخته می‌شوند که هر گیت یک عمل منطقی خاص را انجام می‌دهد. این گیت‌ها اساس سیستم‌های دیجیتال هستند و برای انجام هرگونه پردازش و تصمیم‌گیری استفاده می‌شوند.
+                    </p>
+                    <div class="filter-btns">
+                        <button class="filter-btn" data-filter="all">ALL</button>
+                        <button class="filter-btn" data-filter=".AND">AND</button>
+                        <button class="filter-btn" data-filter=".OR">OR</button>
+                        <button class="filter-btn" data-filter=".NOT">NOT</button>
+                        <button class="filter-btn" data-filter=".XOR">XOR</button>
+                        <button class="filter-btn" data-filter=".NAND">NAND</button>
+                        <button class="filter-btn" data-filter=".NOR">NOR</button>
+                    </div>
                 </div>
+                <div class="madar-gallery">
+                    <div class="mix prt-card AND" style="background-color: #00ffe58d;">
+                        <div class="prt-image">
+                            <div class="li ri-li"><span class="aby">A</span></div>
+                            <div class="li right-li"><span class="aby">B</span></div>
+                            <div class="square"> <span class="aby-txt">AND</span></div>
+                            <div class="horizontal-li "><span class="aby">Y</span></div>
+                        </div> 
+                    </div>
+                    <div class="mix prt-card OR" style="background-color: #ff00958d;">
+                        <div class="prt-image">
+                            <div class="li ri-li"><span class="aby">A</span></div>
+                            <div class="li right-li"><span class="aby">B</span></div>
+                            <div class="square"> <span class="aby-txt">AND</span></div>
+                            <div class="horizontal-li "><span class="aby">Y</span></div>
+                        </div> 
+                    </div>
+                    <div class="mix prt-card NOT" style="background-color: #33ff008d;">
+                        <div class="prt-image">
+                            <div class="li ri-li"><span class="aby">A</span></div>
+                            <div class="li right-li"><span class="aby">B</span></div>
+                            <div class="square"> <span class="aby-txt">AND</span></div>
+                            <div class="horizontal-li "><span class="aby">Y</span></div>
+                        </div> 
+                    </div>
+                    <div class="mix prt-card XOR" style="background-color: #ff08008d;">
+                        <div class="prt-image">
+                            <div class="li ri-li"><span class="aby">A</span></div>
+                            <div class="li right-li"><span class="aby">B</span></div>
+                            <div class="square"> <span class="aby-txt">AND</span></div>
+                            <div class="horizontal-li "><span class="aby">Y</span></div>
+                        </div> 
+                    </div>
+                    <div class="mix prt-card NAND" style="background-color:rgba(72, 0, 255, 0.553);">
+                        <div class="prt-image">
+                            <div class="li ri-li"><span class="aby">A</span></div>
+                            <div class="li right-li"><span class="aby">B</span></div>
+                            <div class="square"> <span class="aby-txt">AND</span></div>
+                            <div class="horizontal-li "><span class="aby">Y</span></div>
+                        </div> 
+                    </div>
+                    <div class="mix prt-card NOR" style="background-color:rgba(0, 255, 128, 0.553);">
+                        <div class="prt-image">
+                            <div class="li ri-li"><span class="aby">A</span></div>
+                            <div class="li right-li"><span class="aby">B</span></div>
+                            <div class="square"> <span class="aby-txt">NOR</span></div>
+                            <div class="horizontal-li "><span class="aby">Y</span></div>
+                        </div> 
+                    </div>
+
+                </div>
+            </div>
+            <!--star star-->
+            <div class="sky" style="top: 500px; left: 20px;">
+                <div class="star" style="top: 40%; left: 40%;"></div>
+                <div class="star" style="top: 60%; left: 60%;"></div>
+                <div class="star" style="top: 10%; left: 50%;"></div>
+                <div class="star" style="top: 80%; left: 80%;"></div>
+                <div class="star" style="top: 90%; left: 85%;"></div>
+                <div class="lines"></div>
+            </div>
+    
+            <div class="sky" style="top: 600px; left: 500px;">
+                <div class="star" style="top: 20%; left: 25%;"></div>
+                <div class="star" style="top: 50%; left: 80%;"></div>
+                <div class="star" style="top: 70%; left: 40%;"></div>
+                <div class="star" style="top: 80%; left: 60%;"></div>
+                <div class="star" style="top: 40%; left: 10%;"></div>
+                <div class="lines"></div>
+            </div>
+    
+            <div class="sky" style="top: 800px; left: 550px;">
+                <div class="star" style="top: 40%; left: 20%;"></div>
+                <div class="star" style="top: 60%; left: 80%;"></div>
+                <div class="star" style="top: 30%; left: 40%;"></div>
+                <div class="star" style="top: 50%; left: 60%;"></div>
+                <div class="star" style="top: 70%; left: 30%;"></div>
+                <div class="lines"></div>
             </div>
         </section>
     </section>
