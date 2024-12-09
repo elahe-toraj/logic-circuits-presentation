@@ -1,6 +1,6 @@
 // ایجاد ستاره‌ها با اندازه‌های تصادفی
 function createStars() {
-    for (let i = 0; i < 3000; i++) {
+    for (let i = 0; i < 1000; i++) {
         let star = document.createElement('section');
         star.classList.add('star');
         
@@ -76,3 +76,13 @@ window.onload = function() {
 
 // ایجاد ستاره‌ها
 createStars();
+//madar
+const pr_section = document.querySelector(".madar");
+let mixer = mixitup(".madar-gallery", {
+    selectors: {
+        target: ".prt-card",
+    },
+    animation: {
+        duration: 500,
+    },
+});
