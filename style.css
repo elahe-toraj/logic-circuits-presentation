@@ -6,8 +6,7 @@
 
 body, html {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -17,15 +16,184 @@ body, html {
     cursor: pointer;
 }
 
-#galaxy {
+
+.galaxy {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: url('https://cdn.pixabay.com/photo/2018/07/11/13/44/space-3536740_960_720.jpg') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
+    z-index: -1; /* پس‌زمینه در پشت محتوای اصلی */
 }
+
+/* استایل برای هدر */
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+.header-box {
+    background-color: rgba(0, 0, 0, 0.862); /* پس‌زمینه با شفافیت */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* مرز سفید */
+    padding: 30px;
+    margin-top: 5%;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    z-index: 11;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.252); /* سایه نئون سفید */
+    animation: headerBoxAnimation 2s ease-out; /* انیمیشن برای بخش باکس */
+}
+
+
+@keyframes headerBoxAnimation {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header-box h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: textColorChange 4s infinite alternate; /* انیمیشن برای تغییر رنگ متن */
+}
+
+@keyframes textColorChange {
+    0% {
+        color: #ff007f; /* رنگ ابتدایی */
+    }
+    50% {
+        color: #00ff7f; /* رنگ وسط */
+    }
+    100% {
+        color: #7f00ff; /* رنگ انتهایی */
+    }
+}
+
+.header-box p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+/* استایل برای فرم جستجو */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.search-input-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; 
+}
+
+.search-input {
+    padding: 12px 40px 12px 12px; 
+    font-size: 16px;
+    width: 100%;
+    border: 2px solid white; 
+    border-radius: 25px; 
+    background-color: black; 
+    color: white; 
+    outline: none; 
+    direction: rtl;
+}
+
+.search-input::placeholder {
+    color: #aaa; /* رنگ placeholder */
+}
+
+.search-icon-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.search-icon-button i {
+    font-size: 20px; 
+}
+/* استایل بخش madar */
+#madar {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.madar {
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.madar h2 {
+    font-size: 2em;
+    color: #ff007f;
+    margin-bottom: 20px;
+}
+
+.madar p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.filter-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.filter-btn {
+    display: inline-block;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
 
 .star, .meteor, .comet {
     position: absolute;
@@ -184,112 +352,4 @@ body, html {
     border-top: 1px solid white;
     transform: rotate(40deg);
     opacity: 0.5;
-}
-
-/* استایل برای هدر */
-.header {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Arial', sans-serif;
-}
-
-
-
-.header-box {
-    background-color: rgba(0, 0, 0, 0.862); /* پس‌زمینه با شفافیت */
-    border: 2px solid rgba(255, 255, 255, 0.7); /* مرز سفید */
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 800px;
-    text-align: center;
-    z-index: 11;
-    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.252); /* سایه نئون سفید */
-    animation: headerBoxAnimation 2s ease-out; /* انیمیشن برای بخش باکس */
-}
-
-
-@keyframes headerBoxAnimation {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.header-box h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-    animation: textColorChange 4s infinite alternate; /* انیمیشن برای تغییر رنگ متن */
-}
-
-@keyframes textColorChange {
-    0% {
-        color: #ff007f; /* رنگ ابتدایی */
-    }
-    50% {
-        color: #00ff7f; /* رنگ وسط */
-    }
-    100% {
-        color: #7f00ff; /* رنگ انتهایی */
-    }
-}
-
-.header-box p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-/* استایل برای فرم جستجو */
-.search-form {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
-}
-
-.search-input-container {
-    position: relative;
-    width: 100%;
-    max-width: 500px; 
-}
-
-.search-input {
-    padding: 12px 40px 12px 12px; 
-    font-size: 16px;
-    width: 100%;
-    border: 2px solid white; 
-    border-radius: 25px; 
-    background-color: black; 
-    color: white; 
-    outline: none; 
-    direction: rtl;
-}
-
-.search-input::placeholder {
-    color: #aaa; /* رنگ placeholder */
-}
-
-.search-icon-button {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.search-icon-button i {
-    font-size: 20px; 
 }
