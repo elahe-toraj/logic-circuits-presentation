@@ -1,45 +1,27 @@
-const galaxy = document.getElementById('galaxy');
-
-// ایجاد ستاره‌ها
+// ایجاد ستاره‌ها با اندازه‌های تصادفی
 function createStars() {
-    for (let i = 0; i < 500; i++) {
-        let star = document.createElement('div');
+    for (let i = 0; i < 3000; i++) {
+        let star = document.createElement('section');
         star.classList.add('star');
         
         let sizeClass = Math.random() < 0.3 ? 'small' : Math.random() < 0.6 ? 'medium' : 'large';
         star.classList.add(sizeClass);
 
         // موقعیت تصادفی در محور X و Y
-        star.style.top = `${Math.random() * 100}vh`;
-        star.style.left = `${Math.random() * 100}vw`;
+        star.style.top = `${Math.random() * 500}vh`;
+        star.style.left = `${Math.random() * 500}vw`;
 
         galaxy.appendChild(star);
     }
 }
 
-// ایجاد شهاب‌سنگ‌ها
-function createMeteor() {
-    let meteor = document.createElement('div');
-    meteor.classList.add('meteor');
-
-    // موقعیت و سرعت تصادفی
-    meteor.style.top = `${Math.random() * 100}vh`;
-    meteor.style.left = `${Math.random() * 100}vw`;
-
-    galaxy.appendChild(meteor);
-
-    setTimeout(() => {
-        meteor.remove();
-    }, 1000);  // حذف شهاب‌سنگ بعد از انیمیشن
-}
-
-// ایجاد دنباله‌دار
+// ایجاد دنباله‌دارهای تصادفی
 function createComet() {
-    let comet = document.createElement('div');
+    let comet = document.createElement('section');
     comet.classList.add('comet');
 
-    comet.style.top = `${Math.random() * 100}vh`;
-    comet.style.left = `${Math.random() * 100}vw`;
+    comet.style.top = `${Math.random() * 300}vh`;
+    comet.style.left = `${Math.random() * 300}vw`;
 
     galaxy.appendChild(comet);
 
@@ -48,7 +30,7 @@ function createComet() {
     }, 8000);  // حذف دنباله‌دار بعد از انیمیشن
 }
 
-// کشیدن خطوط صورت فلکی‌ها
+// ایجاد ستاره‌ها و دنباله‌دارها
 window.onload = function() {
     const skies = document.querySelectorAll('.sky');
 
@@ -88,33 +70,9 @@ window.onload = function() {
         }
     });
 
-    // ایجاد شهاب‌سنگ‌ها و دنباله‌دارها
-    setInterval(createMeteor, 300);
-    setInterval(createComet, 8000);
+    // ایجاد دنباله‌دارها
+    setInterval(createComet, 20000);
 };
 
 // ایجاد ستاره‌ها
 createStars();
-// اضافه کردن رویداد حرکت موس برای ایجاد ستاره‌ها
-document.addEventListener('mousemove', (event) => {
-    let star = document.createElement('div');
-    star.classList.add('star');
-    
-    let sizeClass = Math.random() < 0.3 ? 'small' : Math.random() < 0.6 ? 'medium' : 'large';
-    star.classList.add(sizeClass);
-
-    // تنظیم اندازه ستاره به 5px
-    star.style.width = '5px';
-    star.style.height = '5px';
-
-    // موقعیت موس را به عنوان موقعیت ستاره قرار می‌دهیم
-    star.style.top = `${event.clientY}px`;
-    star.style.left = `${event.clientX}px`;
-
-    galaxy.appendChild(star);
-
-    // ستاره بعد از چند ثانیه از صفحه حذف می‌شود
-    setTimeout(() => {
-        star.remove();
-    }, 3000); // زمان حذف 3 ثانیه
-});
