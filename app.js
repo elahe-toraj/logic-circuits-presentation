@@ -72,17 +72,59 @@ window.onload = function() {
 
     // ایجاد دنباله‌دارها
     setInterval(createComet, 20000);
-};
 
-// ایجاد ستاره‌ها
-createStars();
-//madar
-const pr_section = document.querySelector(".madar");
-let mixer = mixitup(".madar-gallery", {
-    selectors: {
-        target: ".prt-card",
-    },
-    animation: {
-        duration: 500,
-    },
-});
+    // ایجاد ستاره‌ها
+    createStars();
+
+    //madar
+    const pr_section = document.querySelector(".madar");
+    let mixer = mixitup(".madar-gallery", {
+        selectors: {
+            target: ".prt-card",
+        },
+        animation: {
+            duration: 500,
+        },
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // انتخاب تمامی دکمه‌های فیلتر
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        // انتخاب تمامی کارت‌ها
+        const prtCards = document.querySelectorAll('.prt-card');
+    
+        // به هر دکمه فیلتر رویداد کلیک اضافه می‌کنیم
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filterValue = this.getAttribute('data-filter');
+                
+                // برای هر کارت، بررسی می‌کنیم که آیا کلاس فیلتر با کلاس کارت مطابقت دارد یا خیر
+                prtCards.forEach(card => {
+                    const txt = card.querySelector('.txt');
+                    
+                    if (filterValue === 'all' || card.classList.contains(filterValue.substring(1))) {
+                        // اگر کارت مطابقت داشته باشد، نمایش داده می‌شود
+                        card.style.display = 'block';
+                        // و متن آن نمایش داده می‌شود
+                        if (txt) {
+                            txt.classList.add('show'); // نمایش متن
+                        }
+                    } else {
+                        // اگر کارت مطابقت نداشته باشد، مخفی می‌شود
+                        card.style.display = 'none';
+                        // و متن آن مخفی می‌شود
+                        if (txt) {
+                            txt.classList.remove('show'); // مخفی کردن متن
+                        }
+                    }
+                });
+            });
+        });
+    });
+    
+    
+    
+    
+    
+};
