@@ -110,7 +110,6 @@ window.onload = function() {
                             txt.classList.add('show'); // نمایش متن
                         }
                     } else {
-                        // اگر کارت مطابقت نداشته باشد، مخفی می‌شود
                         card.style.display = 'none';
                        
                         if (txt) {
