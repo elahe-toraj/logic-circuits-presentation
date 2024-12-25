@@ -113,7 +113,7 @@ window.onload = function() {
                     } else {
                         // اگر کارت مطابقت نداشته باشد، مخفی می‌شود
                         card.style.display = 'none';
-                        // و متن آن مخفی می‌شود
+                       
                         if (txt) {
                             txt.classList.remove('show'); 
                         }
