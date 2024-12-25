@@ -107,7 +107,7 @@ window.onload = function() {
                         card.style.display = 'block';
                         // و متن آن نمایش داده می‌شود
                         if (txt) {
-                            txt.classList.add('show'); // نمایش متن
+                            txt.classList.add('show'); 
                         }
                     } else {
                         card.style.display = 'none';
