@@ -99,7 +99,6 @@ window.onload = function() {
             button.addEventListener('click', function() {
                 const filterValue = this.getAttribute('data-filter');
                 
-                // برای هر کارت، بررسی می‌کنیم که آیا کلاس فیلتر با کلاس کارت مطابقت دارد یا خیر
                 prtCards.forEach(card => {
                     const txt = card.querySelector('.txt');
                     
