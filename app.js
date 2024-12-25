@@ -115,7 +115,7 @@ window.onload = function() {
                         card.style.display = 'none';
                         // و متن آن مخفی می‌شود
                         if (txt) {
-                            txt.classList.remove('show'); // مخفی کردن متن
+                            txt.classList.remove('show'); 
                         }
                     }
                 });
