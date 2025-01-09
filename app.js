@@ -38,7 +38,6 @@ window.onload = function() {
         const stars = sky.querySelectorAll('.star');
         const lines = sky.querySelector('.lines');
 
-        // دریافت موقعیت ستاره‌ها
         const starPositions = Array.from(stars).map(star => {
             const rect = star.getBoundingClientRect();
             return {
@@ -110,5 +109,10 @@ window.onload = function() {
                 });
             });
         });
-    }); 
+    });
+    
+    
+    
+    
+    
 };
