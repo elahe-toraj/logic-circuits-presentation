@@ -27,10 +27,9 @@ function createComet() {
 
     setTimeout(() => {
         comet.remove();
-    }, 8000);  // حذف دنباله‌دار بعد از انیمیشن
+    }, 8000);  
 }
 
-// ایجاد ستاره‌ها و دنباله‌دارها
 window.onload = function() {
     const skies = document.querySelectorAll('.sky');
 
