@@ -103,17 +103,15 @@ window.onload = function() {
                     const txt = card.querySelector('.txt');
                     
                     if (filterValue === 'all' || card.classList.contains(filterValue.substring(1))) {
-                        // اگر کارت مطابقت داشته باشد، نمایش داده می‌شود
                         card.style.display = 'block';
-                        // و متن آن نمایش داده می‌شود
+
                         if (txt) {
                             txt.classList.add('show'); 
                         }
                     } else {
                         card.style.display = 'none';
-                       
                         if (txt) {
-                            txt.classList.remove('show'); 
+                            txt.classList.remove('show');
                         }
                     }
                 });
