@@ -224,18 +224,18 @@ body, html {
     border-radius: 10px;
 }
 .txt {
-    display: none; /* مخفی کردن متن‌ها به صورت پیش‌فرض */
-    position: absolute; /* قرار دادن متن به صورت مطلق */
-    background-color: rgba(0, 0, 0, 0.7); /* پس‌زمینه شفاف */
+    display: none; 
+    position: absolute; 
+    background-color: rgba(0, 0, 0, 0.7); 
     color: white; /* رنگ متن */
     padding: 10px;
     border-radius: 8px;
-    z-index: 100; /* اطمینان از اینکه متن روی سایر عناصر قرار می‌گیرد */
+    z-index: 100; 
     text-align: center;
 }
 
 .txt.show {
-    display: block !important; /* زمانی که کلاس show به .txt اضافه شود، نمایش داده می‌شود */
+    display: block !important;
 }
 
 
