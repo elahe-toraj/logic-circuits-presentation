@@ -106,9 +106,4 @@ window.onload = function() {
             });
         });
     });
-    
-    
-    
-    
-    
 };
