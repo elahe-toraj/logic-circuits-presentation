@@ -7,7 +7,6 @@ function createStars() {
         let sizeClass = Math.random() < 0.3 ? 'small' : Math.random() < 0.6 ? 'medium' : 'large';
         star.classList.add(sizeClass);
 
-        // موقعیت تصادفی در محور X و Y
         star.style.top = `${Math.random() * 500}vh`;
         star.style.left = `${Math.random() * 500}vw`;
 
@@ -15,7 +14,6 @@ function createStars() {
     }
 }
 
-// ایجاد دنباله‌دارهای تصادفی
 function createComet() {
     let comet = document.createElement('section');
     comet.classList.add('comet');
