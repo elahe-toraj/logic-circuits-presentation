@@ -1,4 +1,3 @@
-// ایجاد ستاره‌ها با اندازه‌های تصادفی
 function createStars() {
     for (let i = 0; i < 1000; i++) {
         let star = document.createElement('section');
