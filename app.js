@@ -47,14 +47,12 @@ window.onload = function() {
             };
         });
 
-        // کشیدن خطوط بین ستاره‌ها
         for (let i = 0; i < starPositions.length; i++) {
             for (let j = i + 1; j < starPositions.length; j++) {
                 drawLine(starPositions[i], starPositions[j]);
             }
         }
 
-        // تابع برای کشیدن خط
         function drawLine(from, to) {
             const line = document.createElement('div');
             line.style.position = 'absolute';
@@ -70,10 +68,8 @@ window.onload = function() {
         }
     });
 
-    // ایجاد دنباله‌دارها
     setInterval(createComet, 20000);
 
-    // ایجاد ستاره‌ها
     createStars();
 
     //madar
@@ -88,13 +84,10 @@ window.onload = function() {
     });
 
     document.addEventListener("DOMContentLoaded", function() {
-        // انتخاب تمامی دکمه‌های فیلتر
         const filterButtons = document.querySelectorAll('.filter-btn');
         
-        // انتخاب تمامی کارت‌ها
         const prtCards = document.querySelectorAll('.prt-card');
     
-        // به هر دکمه فیلتر رویداد کلیک اضافه می‌کنیم
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const filterValue = this.getAttribute('data-filter');
@@ -117,10 +110,5 @@ window.onload = function() {
                 });
             });
         });
-    });
-    
-    
-    
-    
-    
+    }); 
 };
