@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کهکشان و صورت فلکی‌ها</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--background-->
+    <section id="galaxy" class="galaxy">
+        <!--header section-->
+        <header class="header">
+            <div class="section header-box">
+                <h1>دیتای منطق و شمارنده ها</h1>
+                <p>آشنایی با مدارات منطقی و شمارنده‌ها به‌عنوان ابزارهای پایه در طراحی سیستم‌های دیجیتال</p>
+                <p>مدارهای منطقی و شمارنده‌ها از مباحث اساسی در علم مهندسی برق و کامپیوتر هستند و در طراحی سیستم‌های دیجیتال به‌ویژه در پردازش داده‌ها و ذخیره‌سازی اطلاعات استفاده می‌شوند. این مدارها به عنوان واحدهای پایه‌ای در پردازش و ذخیره‌سازی اطلاعات در کامپیوترها، دستگاه‌های الکترونیکی و سیستم‌های کنترل به‌کار می‌روند.</p>
+                
+                <!-- بخش جستجو -->
+                <form class="search-form">
+                    <div class="search-input-container">
+                        <input type="text" placeholder="جستجو..." name="search" class="search-input">
+                        <button type="submit" class="search-icon-button">
+                            <i class='bx bx-search-alt'></i>
+                        </button>
+                    </div>
+                </form>
+                <!--star star-->
+                <div class="sky" style="top: 50px; left: 5px;">
+                    <div class="star" style="top: 30%; left: 40%;"></div>
+                    <div class="star" style="top: 50%; left: 60%;"></div>
+                    <div class="star" style="top: 70%; left: 30%;"></div>
+                    <div class="star" style="top: 80%; left: 80%;"></div>
+                    <div class="star" style="top: 20%; left: 75%;"></div>
+                    <div class="lines"></div>
+                </div>
+        
+                <div class="sky" style="top: 300px; left: 200px;">
+                    <div class="star" style="top: 20%; left: 25%;"></div>
+                    <div class="star" style="top: 50%; left: 80%;"></div>
+                    <div class="star" style="top: 70%; left: 40%;"></div>
+                    <div class="star" style="top: 80%; left: 60%;"></div>
+                    <div class="star" style="top: 40%; left: 10%;"></div>
+                    <div class="lines"></div>
+                </div>
+        
+                <div class="sky" style="top: 150px; left: 400px;">
+                    <div class="star" style="top: 40%; left: 20%;"></div>
+                    <div class="star" style="top: 60%; left: 80%;"></div>
+                    <div class="star" style="top: 30%; left: 40%;"></div>
+                    <div class="star" style="top: 50%; left: 60%;"></div>
+                    <div class="star" style="top: 70%; left: 30%;"></div>
+                    <div class="lines"></div>
+                </div>
+            </div>
+        </header>
+        <!--madar section-->
+        <section class="madar" id="madar">
+            <div class="madar-box">
+                <div class="madar-header">
+                    <h2>مدار های منطقی</h2>
+                    <p>
+                        مدارات منطقی سیستم‌هایی هستند که عملیات منطقی را روی سیگنال‌های دیجیتال (صفر و یک) انجام می‌دهند. این مدارات معمولاً از گیت‌های منطقی ساخته می‌شوند که هر گیت یک عمل منطقی خاص را انجام می‌دهد. این گیت‌ها اساس سیستم‌های دیجیتال هستند و برای انجام هرگونه پردازش و تصمیم‌گیری استفاده می‌شوند.
+                    </p>
+                    <div class="filter-btns">
+                        <button class="filter-btn" data-filter="all">ALL</button>
+                        <button class="filter-btn" data-filter=".AND">AND</button>
+                        <button class="filter-btn" data-filter=".OR">OR</button>
+                        <button class="filter-btn" data-filter=".NOT">NOT</button>
+                        <button class="filter-btn" data-filter=".XOR">XOR</button>
+                        <button class="filter-btn" data-filter=".NAND">NAND</button>
+                        <button class="filter-btn" data-filter=".NOR">NOR</button>
+                    </div>
+                </div>
+                <div class="madar-gallery">
+                    <div class="mix prt-card AND">
+                        <div class="prt-image">
+                            <img src="./img/AND.png" alt="">
+                        </div> 
+                        <div class="txt">
+                            <p>این متن برای گیت AND است.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mix prt-card OR">
+                        <div class="prt-image">
+                            <img src="./img/OR.png" alt="">
+                            <div class="txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix prt-card NOT">
+                        <div class="prt-image">
+                            <img src="./img/NOT.png" alt="">
+                            <div class="txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix prt-card XOR">
+                        <div class="prt-image">
+                            <img src="./img/XOR.png" alt="">
+                            <div class="txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mix prt-card NAND" >
+                        <div class="prt-image">
+                            <img src="./img/NAND.png" alt="">
+                            <div class="txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="mix prt-card NOR" >
+                        <div class="prt-image">
+                            <img src="./img/NOR.png" alt="">
+                            <div class="txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div> 
+                    </div>
 
+                </div>
+            </div>
+            <!--star star-->
+            <div class="sky" style="top: 500px; left: 20px;">
+                <div class="star" style="top: 40%; left: 40%;"></div>
+                <div class="star" style="top: 60%; left: 60%;"></div>
+                <div class="star" style="top: 10%; left: 50%;"></div>
+                <div class="star" style="top: 80%; left: 80%;"></div>
+                <div class="star" style="top: 90%; left: 85%;"></div>
+                <div class="lines"></div>
+            </div>
+    
+            <div class="sky" style="top: 600px; left: 500px;">
+                <div class="star" style="top: 20%; left: 25%;"></div>
+                <div class="star" style="top: 50%; left: 80%;"></div>
+                <div class="star" style="top: 70%; left: 40%;"></div>
+                <div class="star" style="top: 80%; left: 60%;"></div>
+                <div class="star" style="top: 40%; left: 10%;"></div>
+                <div class="lines"></div>
+            </div>
+    
+            <div class="sky" style="top: 800px; left: 550px;">
+                <div class="star" style="top: 40%; left: 20%;"></div>
+                <div class="star" style="top: 60%; left: 80%;"></div>
+                <div class="star" style="top: 30%; left: 40%;"></div>
+                <div class="star" style="top: 50%; left: 60%;"></div>
+                <div class="star" style="top: 70%; left: 30%;"></div>
+                <div class="lines"></div>
+            </div>
+        </section>
+    </section>
+    
+        
+    <script src="./mixitup.min.js"></script>
+    <script src="app.js"></script>
+</body> 
+</html>
