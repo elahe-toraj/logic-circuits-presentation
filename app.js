@@ -1,12 +1,12 @@
 function createStars() {
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 5000; i++) {
         let star = document.createElement('section');
         star.classList.add('star');
         
         let sizeClass = Math.random() < 0.3 ? 'small' : Math.random() < 0.6 ? 'medium' : 'large';
         star.classList.add(sizeClass);
 
-        star.style.top = `${Math.random() * 500}vh`;
+        star.style.top = `${Math.random() * 280}vh`;
         star.style.left = `${Math.random() * 500}vw`;
 
         galaxy.appendChild(star);
@@ -32,7 +32,7 @@ window.onload = function() {
 
     skies.forEach(sky => {
         const stars = sky.querySelectorAll('.star');
-        const lines = sky.querySelector('.lines');
+        
 
         const starPositions = Array.from(stars).map(star => {
             const rect = star.getBoundingClientRect();
