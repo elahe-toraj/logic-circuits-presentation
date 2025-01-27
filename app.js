@@ -32,7 +32,7 @@ window.onload = function() {
 
     skies.forEach(sky => {
         const stars = sky.querySelectorAll('.star');
-        
+        const lines = sky.querySelector('.lines');
 
         const starPositions = Array.from(stars).map(star => {
             const rect = star.getBoundingClientRect();
